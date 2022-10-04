@@ -1,4 +1,4 @@
-import 'package:deli_meals/dummy_data.dart';
+
 import 'package:deli_meals/models/meal.dart';
 import 'package:deli_meals/widgets/meal_item.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(categoryTitle!),
+          title: Text(categoryTitle),
         ),
         body: ListView.builder(
           itemBuilder: (ctx, index) {
@@ -61,7 +61,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
               duration: displayedMeals[index].duration,
               complexity: displayedMeals[index].complexity,
               affordability: displayedMeals[index].affordability,
-              removeItem: _removeMeal,
+
             );
           },
           itemCount: displayedMeals.length,
